@@ -4,6 +4,7 @@ import Header from "./Components/Header"
 import FeedbackData from './data/FeedbackData'
 import FeedbackItem from './Components/FeedbackItem'
 import FeedbackList from './Components/FeedbackList'
+import Card from './Components/shared/Card'
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
             <Header />
             <div ClassName='container'>
                 <FeedbackList feedback={feedback} />
+                <Card>Hello World</Card>
             </div >
         </>
     )
