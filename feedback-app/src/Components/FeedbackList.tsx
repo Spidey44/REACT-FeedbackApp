@@ -1,7 +1,16 @@
-import { PropTypes } from 'react'
+//import { PropTypes } from 'react'
 import FeedbackItem from './FeedbackItem'
+import React from 'react'
+type Feedback={  
+  id:number,
+  rating:number,
+  text?:string
+}
+type Props = {
+  feedback :Feedback[]
+}
 
-function FeedbackList({feedback}) {
+function FeedbackList({feedback}:Props) {
   console.log(feedback)
     if (!feedback || feedback.length === 0) {
         return <p>No Feedback Yet</p>
@@ -17,18 +26,5 @@ function FeedbackList({feedback}) {
 
   )
 }
-
-
-FeedbackList.prototype ={
-  feedback: PropTypes.arrayOf(
-  PropTypes.shape({
-    id:PropTypes.number.isRequired,
-    text:PropTypes.string.isRequired,
-    rating:PropTypes.number.isRequired
-
-    })
-  )
-}
-
 
 export default FeedbackList
