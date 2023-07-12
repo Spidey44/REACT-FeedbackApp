@@ -10,7 +10,7 @@ type Props = {
   feedback :Feedback[]
 }
 
-function FeedbackList({feedback}:Props) {
+function FeedbackList({feedback, handleDelete}:Props) {
   console.log(feedback)
     if (!feedback || feedback.length === 0) {
         return <p>No Feedback Yet</p>
@@ -20,7 +20,9 @@ function FeedbackList({feedback}:Props) {
     <div className='feedback-list'>
       {feedback.map((item) => (
         //<div>{item.rating}</div>
-        < FeedbackItem key={item.id} item={item} />
+        < FeedbackItem key={item.id} item={item} 
+        handleDelete={handleDelete}
+             />
         ))}
     </div>
 
