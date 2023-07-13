@@ -3,6 +3,7 @@ import Header from "./Components/Header"
 import FeedbackList from './Components/FeedbackList'
 import FeedbackData from './data/FeedbackData'
 import Card from './Components/shared/Card'
+import FeedbackStats from './Components/FeedbackStats'
 
 function App() {
 
@@ -17,6 +18,9 @@ function App() {
         <>
             <Header />
             <div ClassName='container'>
+                {/* Single source of truth
+                feedback is out state. All auto update */}
+                <FeedbackStats feedback={feedback} />
                 <FeedbackList feedback={feedback}
                     handleDelete={deleteFeedback} />
                 <Card>Hello World</Card>
