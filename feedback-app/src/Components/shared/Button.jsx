@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 
+//wrap component around+ primary purple /secondary pink class,type of button,isdisabled  
 function Button({ children, version, type, isDisabled }) {
   return (
     <button type={type} disabled={isDisabled} className={`btn btn-${version}`}>
@@ -7,7 +8,7 @@ function Button({ children, version, type, isDisabled }) {
     </button>
   )
 }
-
+// change default here
 Button.defaultProps = {
   version: 'primary',
   type: 'button',
