@@ -30,7 +30,7 @@ function FeedbackForm() {
         <h2>How would you rate your service with us?</h2>
         <RatingSelect select={(rating) => {
           console.log("rating passed to RatingSelect",rating)
-          setRating("rating",rating)
+          setRating(rating)
           }}/>
         <div className='input-group'>
           <input
