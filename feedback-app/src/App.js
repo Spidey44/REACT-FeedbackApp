@@ -1,11 +1,16 @@
+/* Single source of truth
+                feedback is out state. All auto update */
+
 import { v4 as uuidv4 } from 'uuid'
 import { useState } from 'react'
 import Header from "./Components/Header"
 import FeedbackList from './Components/FeedbackList'
 import FeedbackData from './data/FeedbackData'
-import Card from './Components/shared/Card'
+//import Card from './Components/shared/Card'
 import FeedbackStats from './Components/FeedbackStats'
 import FeedbackForm from './Components/FeedbackForm'
+//import AboutPage from './pages/AboutPage'
+//import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 function App() {
 
@@ -25,17 +30,29 @@ function App() {
             setFeedback("text")
         }
     }
+    // return (
+    //     <Router>
+    //         <Header />
+    //         <div ClassName='container'>
+    //             <Route exact path='/'>
+    //                 <FeedbackForm handleAdd={addFeedback} />
+    //                 <FeedbackStats feedback={feedback} />
+    //                 <FeedbackList feedback={feedback}
+    //                     handleDelete={deleteFeedback} />
+    //             </Route>
+
+    //             <Route path='/about' Component={AboutPage} />
+    //         </div >
+    //     </Router>
+    // )
     return (
         <>
             <Header />
             <div ClassName='container'>
                 <FeedbackForm handleAdd={addFeedback} />
-                {/* Single source of truth
-                feedback is out state. All auto update */}
                 <FeedbackStats feedback={feedback} />
                 <FeedbackList feedback={feedback}
                     handleDelete={deleteFeedback} />
-                <Card>Hello World</Card>
             </div >
         </>
     )
