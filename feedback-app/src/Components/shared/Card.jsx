@@ -20,7 +20,7 @@ return (
 
 //can be true or false to switch style
 Card.defaultProps = {
-    reverse: true,
+    reverse: false,
   }
 
 //   validation child and reverse
