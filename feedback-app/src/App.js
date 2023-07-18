@@ -9,6 +9,7 @@ import FeedbackData from './data/FeedbackData'
 //import Card from './Components/shared/Card'
 import FeedbackStats from './Components/FeedbackStats'
 import FeedbackForm from './Components/FeedbackForm'
+import AboutIconLink from './Components/AboutIconLink'
 //import AboutPage from './pages/AboutPage'
 //import { BrowserRouter as Router, Route } from 'react-router-dom'
 
@@ -53,6 +54,8 @@ function App() {
                 <FeedbackStats feedback={feedback} />
                 <FeedbackList feedback={feedback}
                     handleDelete={deleteFeedback} />
+
+                <AboutIconLink />
             </div >
         </>
     )
