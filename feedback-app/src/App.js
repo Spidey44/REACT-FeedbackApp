@@ -10,6 +10,7 @@ import FeedbackData from './data/FeedbackData'
 import FeedbackStats from './Components/FeedbackStats'
 import FeedbackForm from './Components/FeedbackForm'
 import AboutIconLink from './Components/AboutIconLink'
+import { FeedbackProvider } from './context/FeedbackContext'
 
 import AboutPage from './pages/AboutPage'
 //import { BrowserRouter as Router, Route } from 'react-router-dom'
@@ -32,31 +33,31 @@ function App() {
             setFeedback("text")
         }
     }
-    return (
-        <Router>
-            <Header />
-            <div ClassName='container'>
-                <Routes>
-                    <Route path='/' element={<FeedbackForm handleAdd={addFeedback} />} />
-                    <Route path='/' element={<FeedbackStats feedback={feedback} />} />
-                    <Route path='/' element={<FeedbackList feedback={feedback} handleDelete={deleteFeedback} />} />
-                    <Route path='/about' element={<AboutPage />} />
-                </Routes>
-            </div >
-        </Router>
-    )
     // return (
-    //     <>
+    //     <Router>
     //         <Header />
     //         <div ClassName='container'>
-    //             <FeedbackForm handleAdd={addFeedback} />
-    //             <FeedbackStats feedback={feedback} />
-    //             <FeedbackList feedback={feedback}
-    //                 handleDelete={deleteFeedback} />
-
-    //             <AboutIconLink />
+    //             <Routes>
+    //                 <Route path='/' element={<FeedbackForm handleAdd={addFeedback} />} />
+    //                 <Route path='/' element={<FeedbackStats feedback={feedback} />} />
+    //                 <Route path='/' element={<FeedbackList feedback={feedback} handleDelete={deleteFeedback} />} />
+    //                 <Route path='/about' element={<AboutPage />} />
+    //             </Routes>
     //         </div >
-    //     </>
+    //     </Router>
     // )
+    return (
+        <FeedbackProvider>
+            <Header />
+            <div ClassName='container'>
+                <FeedbackForm handleAdd={addFeedback} />
+                <FeedbackStats feedback={feedback} />
+                <FeedbackList feedback={feedback}
+                    handleDelete={deleteFeedback} />
+
+                <AboutIconLink />
+            </div >
+        </FeedbackProvider>
+    )
 }
 export default App
