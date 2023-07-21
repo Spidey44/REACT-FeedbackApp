@@ -33,31 +33,33 @@ function App() {
             setFeedback("text")
         }
     }
-    // return (
-    //     <Router>
-    //         <Header />
-    //         <div ClassName='container'>
-    //             <Routes>
-    //                 <Route path='/' element={<FeedbackForm handleAdd={addFeedback} />} />
-    //                 <Route path='/' element={<FeedbackStats feedback={feedback} />} />
-    //                 <Route path='/' element={<FeedbackList feedback={feedback} handleDelete={deleteFeedback} />} />
-    //                 <Route path='/about' element={<AboutPage />} />
-    //             </Routes>
-    //         </div >
-    //     </Router>
-    // )
     return (
         <FeedbackProvider>
-            <Header />
-            <div ClassName='container'>
-                <FeedbackForm handleAdd={addFeedback} />
-                <FeedbackStats feedback={feedback} />
-                <FeedbackList feedback={feedback}
-                    handleDelete={deleteFeedback} />
-
-                <AboutIconLink />
-            </div >
+            <Router>
+                <Header />
+                <div ClassName='container'>
+                    <Routes>
+                        <Route path='/' element={<FeedbackForm handleAdd={addFeedback} />} />
+                        <Route path='/' element={<FeedbackStats feedback={feedback} />} />
+                        <Route path='/' element={<FeedbackList feedback={feedback} handleDelete={deleteFeedback} />} />
+                        <Route path='/about' element={<AboutPage />} />
+                    </Routes>
+                </div >
+            </Router>
         </FeedbackProvider>
     )
+    // return (
+    //     <FeedbackProvider>
+    //         <Header />
+    //         <div ClassName='container'>
+    //             <FeedbackForm handleAdd={addFeedback} />
+    //             <FeedbackStats feedback={feedback} />
+    //             <FeedbackList feedback={feedback}
+    //                 handleDelete={deleteFeedback} />
+
+    //             <AboutIconLink />
+    //         </div >
+    //     </FeedbackProvider>
+    // )
 }
 export default App
