@@ -22,8 +22,6 @@ function App() {
     const addFeedback = (newFeedback) => {
         newFeedback.id = uuidv4()
         console.log("newFeedback", newFeedback)
-        // copy All into array spread operator: new feedback + all current feedback
-        //added in global state
         setFeedback([newFeedback, ...feedback])
 
     }

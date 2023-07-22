@@ -1,5 +1,4 @@
 //loop through and import each feedback
-
 //import { PropTypes } from 'react'
 import { motion, AnimatePresence } from "framer-motion"
 import FeedbackItem from './FeedbackItem'
@@ -16,7 +15,7 @@ import FeedbackContext from "../context/FeedbackContext"
 // }
 
 function FeedbackList({ handleDelete}/*:Props*/) {
-  const { feedback } =useContext(FeedbackContext)
+  const { feedback } = useContext(FeedbackContext);
   console.log(feedback)
     if (!feedback || feedback.length === 0) {
         return <p>No Feedback Yet</p>
