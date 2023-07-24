@@ -27,8 +27,8 @@ function App() {
     }
 
     const deleteFeedback = (id) => {
-        if (window.confirm('Are yiu sure you want to delete?')) {
-            setFeedback("text")
+        if (window.confirm('Are you sure you want to delete?')) {
+            setFeedback(feedback.filter((item) => item.id !== id))
         }
     }
     return (
@@ -42,6 +42,7 @@ function App() {
                         <Route path='/' element={<FeedbackList feedback={feedback} handleDelete={deleteFeedback} />} />
                         <Route path='/about' element={<AboutPage />} />
                     </Routes>
+                    <AboutIconLink />
                 </div >
             </Router>
         </FeedbackProvider>

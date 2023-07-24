@@ -8,15 +8,17 @@ export const FeedbackProvider = ({ children }) => {
             id: 1,
             text: 'This item is from context',
             rating: 9,
-        }
+        },
     ])
 
-    return <FeedbackContext.Provider
-        value={{
-            feedback,
-        }}>
-        {children}
-    </FeedbackContext.Provider>
+    return (
+        <FeedbackContext.Provider
+            value={{
+                feedback,
+            }}
+        >
+            {children}
+        </FeedbackContext.Provider>
+    )
 }
-
 export default FeedbackContext
