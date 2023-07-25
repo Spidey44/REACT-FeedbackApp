@@ -39,7 +39,7 @@ function App() {
                     <Routes>
                         <Route path='/' element={<FeedbackForm handleAdd={addFeedback} />} />
                         <Route path='/' element={<FeedbackStats feedback={feedback} />} />
-                        <Route path='/' element={<FeedbackList feedback={feedback} handleDelete={deleteFeedback} />} />
+                        <Route path='/test' element={<FeedbackList feedback={feedback} handleDelete={deleteFeedback} />} />
                         <Route path='/about' element={<AboutPage />} />
                     </Routes>
                     <AboutIconLink />
