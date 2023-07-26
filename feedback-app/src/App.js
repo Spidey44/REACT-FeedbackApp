@@ -15,6 +15,16 @@ import { FeedbackProvider } from './context/FeedbackContext'
 import AboutPage from './pages/AboutPage'
 //import { BrowserRouter as Router, Route } from 'react-router-dom'
 
+function FeedbackPage({ feedback, addFeedback }) {
+    return (
+        <>
+            <FeedbackStats feedback={feedback} />
+            <FeedbackForm handleAdd={addFeedback} />
+            <FeedbackList feedback={feedback} />
+        </>
+    )
+
+}
 function App() {
 
     const [feedback, setFeedback] = useState(FeedbackData)
@@ -37,9 +47,7 @@ function App() {
                 <Header />
                 <div ClassName='container'>
                     <Routes>
-                        <Route path='/' element={<FeedbackForm handleAdd={addFeedback} />} />
-                        <Route path='/' element={<FeedbackStats feedback={feedback} />} />
-                        <Route path='/test' element={<FeedbackList feedback={feedback} handleDelete={deleteFeedback} />} />
+                        <Route path='/' element={<FeedbackPage feedback={feedback} addFeedback={addFeedback} />} />
                         <Route path='/about' element={<AboutPage />} />
                     </Routes>
                     <AboutIconLink />
