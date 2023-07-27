@@ -18,9 +18,9 @@ import AboutPage from './pages/AboutPage'
 function FeedbackPage({ feedback, addFeedback }) {
     return (
         <>
-            <FeedbackStats feedback={feedback} />
+            <FeedbackStats /*feedback={feedback}*/ />
             <FeedbackForm handleAdd={addFeedback} />
-            <FeedbackList feedback={feedback} />
+            <FeedbackList /*feedback={feedback}*/ />
         </>
     )
 
