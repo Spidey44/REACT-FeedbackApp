@@ -14,7 +14,7 @@ import FeedbackContext from "../context/FeedbackContext"
 //   feedback :Feedback[]
 // }
 
-function FeedbackList({ handleDelete}/*:Props*/) {
+function FeedbackList() {
   const { feedback } = useContext(FeedbackContext);
   console.log(feedback)
     if (!feedback || feedback.length === 0) {
@@ -34,7 +34,6 @@ function FeedbackList({ handleDelete}/*:Props*/) {
             <FeedbackItem
               key={item.id}
               item={item}
-              handleDelete={handleDelete}
             />
           </motion.div>
         ))}

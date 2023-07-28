@@ -1,13 +1,15 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import Card from './shared/Card'
 import Button from './shared/Button'
 import RatingSelect from './RatingSelect'
+import FeedbackContext from '../context/FeedbackContext'
 
-function FeedbackForm({handleAdd}) {
+function FeedbackForm() {
   const [text, setText] = useState('type here')
   const [rating, setRating] = useState(10)
   const [btnDisabled, setBtnDisabled] = useState('true')
   const [message, setMessage] = useState('hello')
+  const {addFeedback} = useContext(FeedbackContext)
 
   const handleTextChange = (e) => {
     console.log("typed",e.target.value)
@@ -32,7 +34,7 @@ if(text.trim().length >10 ){
     rating,
   }
   console.log('handleSubmit',newFeedback)
-  handleAdd(newFeedback)
+  addFeedback(newFeedback)
   setText('')
 }
 }
