@@ -11,18 +11,18 @@ export const FeedbackProvider = ({ children }) => {
             rating: 9,
         },
         {
-            id: 1,
-            text: 'This item is from context',
+            id: 2,
+            text: 'This item is from context 2',
             rating: 10,
         },
         {
-            id: 1,
-            text: 'This item is from context',
-            rating: 11,
+            id: 3,
+            text: 'This item is from context 3',
+            rating: 1,
         },
         {
-            id: 1,
-            text: 'This item is from context',
+            id: 4,
+            text: 'This item is from context 4',
             rating: 9,
         },
     ])
@@ -61,7 +61,10 @@ export const FeedbackProvider = ({ children }) => {
                 feedback,
                 deleteFeedback,
                 addFeedback,
-                editFeedback
+                // function
+                editFeedback,
+                // object + state holding the item and boolean
+                feedbackEdit,
             }}
         >
             {children}
