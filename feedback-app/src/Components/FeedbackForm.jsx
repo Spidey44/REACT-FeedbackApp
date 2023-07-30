@@ -10,7 +10,7 @@ function FeedbackForm() {
   const [btnDisabled, setBtnDisabled] = useState('true')
   const [message, setMessage] = useState('hello')
   
-  const {addFeedback, feedbackEdit} = useContext(FeedbackContext)
+  const {addFeedback, feedbackEdit, updateFeedback } = useContext(FeedbackContext)
 
   //Good for HTTP request
   // useEffect run on []change, not if empty = if ot emprty: 
@@ -44,8 +44,13 @@ if(text.trim().length >10 ){
     text,
     rating,
   }
+
+  if(feedbackEdit.edit === true ) {
+    updateFeedback(feedbackEdit.item.id, newFeedback)
+  } else {
+    addFeedback(newFeedback)
+  }
   console.log('handleSubmit',newFeedback)
-  addFeedback(newFeedback)
   setText('')
 }
 }
