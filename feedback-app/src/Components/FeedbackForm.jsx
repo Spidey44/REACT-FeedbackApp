@@ -49,8 +49,9 @@ if(text.trim().length >10 ){
     updateFeedback(feedbackEdit.item.id, newFeedback)
   } else {
     addFeedback(newFeedback)
+    console.log('handleSubmit',newFeedback)
   }
-  console.log('handleSubmit',newFeedback)
+
   setText('')
 }
 }
