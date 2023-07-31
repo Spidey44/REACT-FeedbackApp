@@ -1,6 +1,6 @@
 # Repo Goal: Build several applications using REACT
 
-1- FeedbackApp. Learning #1, #2, #3
+1- **FeedbackApp** - Learnings concepts #1, #2, #3 - https://main.d13lomuaq9n2g9.amplifyapp.com/
 
 2- Github Finder
 
