@@ -11,7 +11,7 @@ npm run dev
 
 - POSTMAN API Requests: 
 GET - http://localhost:5000/feedback
-POST - http://localhost:5000/feedback?rate=8&text=this is from the backend
+POST - http://localhost:5000/feedback?rate=8&text=ThisComingIsFromTheBackend
 DELETE - http://localhost:5000/feedback/3
 
 - WEB HOSTING AWS Amplify: 
