@@ -1,6 +1,21 @@
 # Repo Goal: Build several applications using REACT
 
-1- **FeedbackApp** - Learnings concepts #1, #2, #3 - https://main.d13lomuaq9n2g9.amplifyapp.com/
+1- **FeedbackApp** - Learnings concepts #1, #2, #3 
+
+- Packages:
+https://www.npmjs.com/package/concurrently 
+https://www.npmjs.com/package/json-server
+
+- Start the locally App @port 3000 and Server @port 5000
+npm run dev
+
+- POSTMAN API Requests
+GET - http://localhost:5000/feedback
+POST - http://localhost:5000/feedback?rate=8&text=this is from the backend
+DELETE - http://localhost:5000/feedback/3
+
+- WEB HOSTING AWS Amplify
+https://main.d13lomuaq9n2g9.amplifyapp.com/
 
 2- Github Finder
 
