@@ -1,31 +1,30 @@
 # Repo Goal: Build several applications using REACT
 
-1- **FeedbackApp** - Learnings concepts #1, #2, #3 
+1- **FeedbackApp** - Learnings concepts #1, #2, #3
 
 - Packages:
-https://www.npmjs.com/package/concurrently 
-https://www.npmjs.com/package/json-server
+  https://www.npmjs.com/package/concurrently
+  https://www.npmjs.com/package/json-server
 
 - Start the locally App @port 3000 and Server @port 5000
-npm run dev
+  npm run dev
 
-- POSTMAN API Requests: 
-GET - http://localhost:5000/feedback
-POST - http://localhost:5000/feedback?rate=8&text=ThisComingIsFromTheBackend
-DELETE - http://localhost:5000/feedback/3
+- POSTMAN API Requests:
+  GET - http://localhost:5000/feedback
+  POST - http://localhost:5000/feedback?rate=8&text=ThisComingIsFromTheBackend
+  DELETE - http://localhost:5000/feedback/3
 
-- WEB HOSTING AWS Amplify: 
-https://main.d13lomuaq9n2g9.amplifyapp.com/
-
-
-
+- WEB HOSTING AWS Amplify:
+  https://main.d13lomuaq9n2g9.amplifyapp.com/
 
 2- Github Finder
+
+- Install Tailling CSS with DaisyUI plugin: low level CSS framework providing several utility classes such as button, alert...
+  https://tailwindcss.com/docs/installation
 
 3- Fierbase House marketplace
 
 4- Full stack MERN Application
-
 
 # Concepts I plan to cover
 
