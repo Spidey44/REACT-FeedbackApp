@@ -1,7 +1,28 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+
+import Explore from './pages/Explore'
+import Offers from './pages/Offers'
+import Profile from './pages/Profile'
+import SignIn from './pages/Signin'
+import SignUp from './pages/Signup'
+import ForgotPassword from './pages/ForgotPassword'
+
+
+
 function App() {
   return (
     <>
-      <h1>My App</h1>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Explore />} />
+          <Route path='/Offers' element={<Offers />} />
+          <Route path='/Profile' element={<Profile />} />
+          <Route path='/Sign-in' element={<SignIn />} />
+          <Route path='/Sign-up' element={<SignUp />} />
+          <Route path='/Forgot-Password' element={<ForgotPassword />} />
+        </Routes>
+
+      </Router>
     </>
   );
 }
