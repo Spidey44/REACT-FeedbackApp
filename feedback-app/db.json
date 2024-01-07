@@ -1,9 +1,9 @@
 {
   "feedback": [
     {
-      "id": 1,
-      "rating": 10,
-      "text": " - http://localhost:5000/feedback - This is feedback item 1 coming from the backend"
+      "text": " - http://localhost:5000/feedback - This is feedback item 1 coming from the backend",
+      "rating": 1,
+      "id": 1
     },
     {
       "id": 2,
@@ -16,8 +16,8 @@
       "id": 4
     },
     {
-      "rating": "5",
-      "text": "postmantestsend data to json",
+      "text": "1234445ttototogkg",
+      "rating": 6,
       "id": 5
     }
   ]
